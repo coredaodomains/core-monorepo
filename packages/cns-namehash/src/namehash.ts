@@ -18,8 +18,8 @@ export function namehash(inputName: string): string {
 
     // eslint-disable-next-line for-direction
     for (let i = labels.length - 1; i >= 0; i--) {
-      const labelSha = sha.keccak256(labels[i]);
-      node = sha.keccak256(Buffer.from(node + labelSha, 'hex'));
+      const labelSha = sha.keccak_256(labels[i]);
+      node = sha.keccak_256(Buffer.from(node + labelSha, 'hex'));
     }
   }
 
