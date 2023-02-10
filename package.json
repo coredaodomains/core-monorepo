@@ -1,0 +1,21 @@
+{
+  "name": "core-monorepo",
+  "version": "0.0.1",
+  "description": "COREDAO Domain Core Packages Monorepo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CoreDAO",
+    "CNSJs"
+  ],
+  "author": "CNSJs Team",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "lint-staged": "^13.1.1",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5"
+  }
+}
