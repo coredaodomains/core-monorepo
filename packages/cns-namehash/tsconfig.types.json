@@ -1,0 +1,11 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "module": "ESNext",
+        "outDir": "types",
+        "target": "ESNext",
+        "emitDeclarationOnly": true,
+        "declaration": true, /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+        "declarationDir": "./",
+    }
+}
