@@ -7,7 +7,7 @@ describe('namehash', () => {
       const input = '';
       const zeroExpected =
         '0x0000000000000000000000000000000000000000000000000000000000000000';
-      const output = cnsUtil.hash(input);
+      const output = cnsUtil.hashed(input);
       expect(output).toEqual(zeroExpected);
     });
 

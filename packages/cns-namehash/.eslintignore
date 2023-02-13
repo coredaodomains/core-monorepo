@@ -4,6 +4,7 @@ node_modules
 lib
 dist
 build
+types
 
 # don't lint nyc coverage output
 coverage
