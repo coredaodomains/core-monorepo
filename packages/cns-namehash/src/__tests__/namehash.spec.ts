@@ -17,6 +17,25 @@ describe('namehash', () => {
         '0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae';
       expect(namehash(input)).toEqual(ethExpected);
     });
+
+    it('TLD core', () => {
+      const input = 'core';
+      const ethExpected =
+        '0xe4d63c8c37eeb1307ca8868d95e632445f0fb69aff462960c4f050f4641b6fed';
+      expect(namehash(input)).toEqual(ethExpected);
+    });
+
+    it('TLD empty label', () => {
+      const input = '';
+      expect(cnsUtil.sha3(input)).toEqual(null);
+    });
+
+    it('TLD core label', () => {
+      const input = 'core';
+      const ethExpected =
+        '0xc681a85306374a5ab27f0bbc385296a54bcd314a1948b6cf61c4ea1bc44bb9f8';
+      expect(cnsUtil.sha3(input)).toEqual(ethExpected);
+    });
   });
 
   describe('normalize', () => {

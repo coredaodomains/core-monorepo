@@ -1,6 +1,6 @@
 {
   "name": "@coredomains/cns-namehash",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "CoreDAO Domains namehash utility",
   "homepage": "https://github.com/coredaodomains/core-monorepo/blob/main/packages/cns-namehash/README.md",
   "repository": {
@@ -28,7 +28,7 @@
     "build": "pnpm build:types && pnpm build:esm && pnpm build:cjs && pnpm build:browser",
     "prepare:publish": "pnpm clean && pnpm test && pnpm build",
     "build:esm": "tsc -p tsconfig.esm.json",
-    "build:types":"tsc -p tsconfig.types.json",
+    "build:types": "tsc -p tsconfig.types.json",
     "build:cjs": "esbuild src/index.ts --bundle --format=cjs --sourcemap=external --outfile=dist/index.js",
     "build:node": "esbuild src/cli.ts --bundle --platform=node --minify --sourcemap=external --outfile=dist/cli.js",
     "build:browser": "esbuild src/browser.ts --bundle --minify --sourcemap=external --outfile=dist/browser/namehash.min.js",

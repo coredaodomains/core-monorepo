@@ -23,6 +23,16 @@ const normalized = normalize(input)
 // 
 ```
 
+> If your use in browser,need polyfill Buffer
+
+npm install buffer
+
+
+```typescript 
+import { Buffer } from 'buffer'
+globalThis.Buffer = Buffer
+```
+
 ## Security Warning
 
 ENS Supports UTF-8 characters, and so many duplicate names are possible. For example:

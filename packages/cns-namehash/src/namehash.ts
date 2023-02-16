@@ -6,6 +6,12 @@ export function normalize(name: string): string {
   return name ? uts46.toUnicode(name, { useStd3ASCII: true }) : name;
 }
 
+export function labelhash(inputName: string):string|null {
+  if(inputName === undefined || normalize(inputName) === '')return null
+  const name = normalize(inputName);
+  return '0x'+sha.keccak_256(name)
+}
+
 export function namehash(inputName: string): string {
   let node = '';
   for (let i = 0; i < 32; i++) {
