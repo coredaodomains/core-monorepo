@@ -31,7 +31,7 @@
     "build:types": "tsc -p tsconfig.types.json",
     "build:cjs": "esbuild src/index.ts --bundle --format=cjs --sourcemap=external --outfile=dist/index.js",
     "build:node": "esbuild src/cli.ts --bundle --platform=node --minify --sourcemap=external --outfile=dist/cli.js",
-    "build:browser": "esbuild src/browser.ts --bundle --minify --sourcemap=external --outfile=dist/browser/namehash.min.js",
+    "build:browser": "esbuild src/browser.ts --bundle --minify --sourcemap --outfile=dist/browser/namehash.min.js",
     "test": "jest --config jest.config.js --coverage",
     "pretty": "prettier --write \"src/**/*.(ts|js)\"",
     "lint:fix": "eslint src --ext .js,ts"

@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "description": "COREDAO Domain Core Packages Monorepo",
   "scripts": {
+    "example": "npx http-server ./examples -dig -a 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,7 +13,9 @@
   "author": "CNSJs Team",
   "license": "MIT",
   "devDependencies": {
+    "buffer": "^6.0.3",
     "eslint": "^8.33.0",
+    "http-server": "^14.1.1",
     "lint-staged": "^13.1.1",
     "prettier": "^2.8.4",
     "rimraf": "^4.1.2",

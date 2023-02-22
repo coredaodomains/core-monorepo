@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNS Namehash Lib</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./libs/tailwindcss.config.js"></script>
+    <script src="./libs/buffer.min.js"></script>
+    <script src="./libs/namehash.min.js"></script>
+    <!-- <script src="./libs/namehash.min.js.map"></script> -->
+</head>
+<body>
+    <div class="w-full h-screen flex flex-col justify-start justify-items-stretch">
+        <h1 class="text-3xl pt-24 pb-8 text-center">
+           CNS NameHash library
+        </h1>
+        <div class="content-test  bg-gray-300 p-3 w-full flex-grow">
+            <div class="row inline-flex space-x-4">
+                <div class="m-auto">CNS name:</div>
+                <input type="text" id="inputDomain" value="💥.core"/>
+                <button class="border px-8 py-2 text-sm bg-indigo-600 text-white" id="testBtn">Test</button>
+  
+            </div>
+            <div class="result flex flex-col justify-start items-start space-y-2">
+                <div class="inline-flex">
+                    <span>label hash:</span>
+                    <p class="label-hash"></p>
+                </div>
+                <div class="inline-flex">
+                    <span>namehash :</span>
+                    <p class="hash"></p>
+                </div>
+                <div class="inline-flex">
+                    <span>normalized :</span>
+                    <p class="normal-name"></p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded',()=>{
+            document.querySelector('#testBtn').addEventListener('click',onTestBtnClick)
+
+            function onTestBtnClick(target) {
+                const inputName = document.querySelector('#inputDomain')
+                console.log(inputName.value)
+                const namehash = CnsHash.hashed(inputName.value)
+                document.querySelector('.hash').innerHTML = namehash
+                document.querySelector('.normal-name').innerHTML = CnsHash.normalize(inputName.value)
+                document.querySelector('.label-hash').innerHTML = CnsHash.labelhashed(inputName.value)
+            }
+        })
+    </script>
+</body>
+</html>
